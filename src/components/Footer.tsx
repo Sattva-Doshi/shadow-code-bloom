@@ -1,0 +1,113 @@
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Code, Facebook, Instagram, Github, Youtube } from 'lucide-react';
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Github, href: '#', label: 'GitHub' },
+    { icon: Youtube, href: '#', label: 'YouTube' },
+  ];
+
+  const footerLinks = [
+    {
+      title: 'Services',
+      links: [
+        { name: 'Web Development', href: '#' },
+        { name: 'Mobile Apps', href: '#' },
+        { name: 'UI/UX Design', href: '#' },
+        { name: 'SEO Services', href: '#' },
+      ],
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/about' },
+        { name: 'Careers', href: '#' },
+        { name: 'Contact', href: '/contact' },
+      ],
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Blog', href: '#' },
+        { name: 'Case Studies', href: '/projects' },
+        { name: 'Documentation', href: '#' },
+        { name: 'Support', href: '#' },
+      ],
+    },
+  ];
+
+  return (
+    <footer className="glass-card mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Brand Section */}
+          <div className="lg:col-span-2">
+            <Link to="/" className="flex items-center space-x-2 mb-4">
+              <div className="p-2 rounded-lg bg-gradient-to-r from-neon-cyan to-neon-blue">
+                <Code className="h-6 w-6 text-dark-bg" />
+              </div>
+              <span className="text-xl font-bold text-gradient">DevStudio</span>
+            </Link>
+            <p className="text-gray-400 mb-6 max-w-md">
+              We create stunning digital experiences that help businesses grow and succeed in the modern world.
+            </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="p-3 rounded-lg glass-card glass-card-hover transition-all duration-300 hover:text-neon-cyan"
+                  aria-label={social.label}
+                >
+                  <social.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Links Sections */}
+          {footerLinks.map((section, index) => (
+            <div key={index}>
+              <h3 className="text-white font-semibold mb-4">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <Link
+                      to={link.href}
+                      className="text-gray-400 hover:text-neon-cyan transition-colors duration-300"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm">
+            © {currentYear} DevStudio. All rights reserved.
+          </p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link to="#" className="text-gray-400 hover:text-neon-cyan text-sm transition-colors duration-300">
+              Privacy Policy
+            </Link>
+            <Link to="#" className="text-gray-400 hover:text-neon-cyan text-sm transition-colors duration-300">
+              Terms of Service
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
