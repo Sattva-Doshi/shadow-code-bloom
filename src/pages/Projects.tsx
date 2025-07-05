@@ -69,6 +69,26 @@ const Projects = () => {
       liveUrl: '#',
       githubUrl: '#',
     },
+    {
+      id: 7,
+      title: 'Sales Analytics Dashboard',
+      category: 'analytics',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600',
+      description: 'Advanced data analytics platform with real-time reporting, predictive insights, and interactive visualizations.',
+      technologies: ['React', 'D3.js', 'Python', 'TensorFlow'],
+      liveUrl: '#',
+      githubUrl: '#',
+    },
+    {
+      id: 8,
+      title: 'Business Intelligence Tool',
+      category: 'analytics',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600',
+      description: 'Comprehensive BI solution with automated reporting, data mining, and machine learning capabilities.',
+      technologies: ['Power BI', 'Azure', 'SQL Server', 'R'],
+      liveUrl: '#',
+      githubUrl: '#',
+    },
   ];
 
   const filters = [
@@ -76,6 +96,7 @@ const Projects = () => {
     { key: 'web', label: 'Web Development' },
     { key: 'mobile', label: 'Mobile Apps' },
     { key: 'design', label: 'UI/UX Design' },
+    { key: 'analytics', label: 'Data Analytics' },
   ];
 
   const filteredProjects = selectedFilter === 'all' 
@@ -247,7 +268,7 @@ const Projects = () => {
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss how we can bring your vision to life
             </p>
-            <Link to="/contact" className="btn-glow">
+            <Link to="/contact" className="btn-glow inline-flex items-center">
               Start Your Project
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

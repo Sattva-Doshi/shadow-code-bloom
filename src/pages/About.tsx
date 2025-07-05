@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { CheckIcon, Star, Users, Code, Monitor, Briefcase } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -105,9 +106,9 @@ const About = () => {
             </div>
             <div className="animate-scale-up">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600"
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&crop=center"
                 alt="Team collaboration"
-                className="rounded-2xl glass-card w-full h-auto"
+                className="rounded-2xl glass-card w-full h-auto object-cover"
               />
             </div>
           </div>
@@ -197,15 +198,15 @@ const About = () => {
               Let's discuss how we can help bring your vision to life
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="btn-glow">
+              <Link to="/contact" className="btn-glow inline-flex items-center">
                 Get In Touch
-              </a>
-              <a
-                href="/projects"
-                className="px-6 py-3 rounded-lg border border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg transition-all duration-300"
+              </Link>
+              <Link
+                to="/projects"
+                className="px-6 py-3 rounded-lg border border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg transition-all duration-300 inline-flex items-center"
               >
                 View Our Work
-              </a>
+              </Link>
             </div>
           </div>
         </div>

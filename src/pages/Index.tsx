@@ -77,13 +77,13 @@ const Index = () => {
               Transform your ideas into powerful digital solutions with our expert web development team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link to="/projects" className="btn-glow">
+              <Link to="/projects" className="btn-glow inline-flex items-center">
                 View Our Work
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/contact"
-                className="px-6 py-3 rounded-lg border border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg transition-all duration-300"
+                className="px-6 py-3 rounded-lg border border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg transition-all duration-300 inline-flex items-center"
               >
                 Get In Touch
               </Link>
@@ -185,7 +185,7 @@ const Index = () => {
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss your project and bring your vision to life
             </p>
-            <Link to="/contact" className="btn-glow">
+            <Link to="/contact" className="btn-glow inline-flex items-center">
               Start Your Project
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
