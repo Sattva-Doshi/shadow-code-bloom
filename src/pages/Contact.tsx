@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Phone, Message, CheckIcon } from 'lucide-react';
+import { Phone, Mail, CheckIcon } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useToast } from '../hooks/use-toast';
@@ -46,7 +45,7 @@ const Contact = () => {
       description: 'Mon-Fri 9am-6pm EST',
     },
     {
-      icon: Message,
+      icon: Mail,
       title: 'Email',
       details: 'hello@devstudio.com',
       description: 'We respond within 24 hours',
