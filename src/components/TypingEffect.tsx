@@ -55,8 +55,12 @@ const TypingEffect: React.FC<TypingEffectProps> = ({
   return (
     <span className={className}>
       {currentText}
-      <span className={`inline-block w-1 h-8 ml-1 bg-neon-cyan ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>
-        |
+      <span className={`inline-block ml-1 bg-neon-cyan ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}
+            style={{ 
+              width: '4px', 
+              height: '1em',
+              verticalAlign: 'baseline'
+            }}>
       </span>
     </span>
   );

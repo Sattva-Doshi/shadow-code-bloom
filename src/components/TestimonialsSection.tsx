@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Star } from 'lucide-react';
+import CountingNumber from './CountingNumber';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -24,15 +25,42 @@ const TestimonialsSection = () => {
     },
   ];
 
+  const stats = [
+    { number: 50, suffix: '+', label: 'Projects Completed' },
+    { number: 100, suffix: '%', label: 'Client Satisfaction' },
+    { number: 3, suffix: '+', label: 'Years Experience' },
+    { number: 24, suffix: '/7', label: 'Support Available' }
+  ];
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="text-center animate-slide-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">
+                <CountingNumber 
+                  targetNumber={stat.number} 
+                  suffix={stat.suffix}
+                  duration={2000}
+                />
+              </div>
+              <p className="text-gray-300 text-sm md:text-base">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            What Our <span className="text-gradient">Clients Say</span>
+            What My <span className="text-gradient">Clients Say</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Don't just take our word for it - hear from our satisfied clients
+            Don't just take my word for it - hear from my satisfied clients
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
