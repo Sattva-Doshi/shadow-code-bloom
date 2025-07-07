@@ -2,10 +2,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import TypingEffect from './TypingEffect';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const typingTexts = [
+    'Digital Solutions',
+    'Web Applications', 
+    'User Experiences',
+    'Modern Interfaces'
+  ];
 
   useEffect(() => {
     setIsVisible(true);
@@ -30,7 +38,14 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="text-white">I Create</span>
               <br />
-              <span className="text-gradient">Digital Solutions</span>
+              <span className="text-gradient">
+                <TypingEffect 
+                  texts={typingTexts} 
+                  typingSpeed={80}
+                  deletingSpeed={40}
+                  delayBetweenTexts={1500}
+                />
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
               Freelance developer specializing in modern web applications and user experiences that bring your ideas to life.
