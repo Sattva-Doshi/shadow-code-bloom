@@ -6,63 +6,47 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const About = () => {
-  const teamMembers = [
-    {
-      name: 'Alex Johnson',
-      role: 'Lead Developer',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
-      skills: ['React', 'Node.js', 'TypeScript'],
-    },
-    {
-      name: 'Sarah Davis',
-      role: 'UI/UX Designer',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b1e3?w=400',
-      skills: ['Figma', 'Adobe XD', 'Prototyping'],
-    },
-    {
-      name: 'Mike Chen',
-      role: 'Full Stack Developer',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400',
-      skills: ['Python', 'React', 'AWS'],
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Project Manager',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400',
-      skills: ['Agile', 'Scrum', 'Leadership'],
-    },
+  const skills = [
+    'React & Next.js',
+    'Node.js & Express',
+    'TypeScript',
+    'MongoDB & PostgreSQL',
+    'AWS & Cloud Services',
+    'Git & DevOps',
+    'UI/UX Design',
+    'API Development',
   ];
 
   const values = [
     {
       icon: Star,
-      title: 'Excellence',
-      description: 'We strive for perfection in every project we undertake.',
+      title: 'Quality First',
+      description: 'I deliver clean, scalable code that stands the test of time.',
     },
     {
       icon: Users,
-      title: 'Collaboration',
-      description: 'We work closely with our clients to achieve their goals.',
+      title: 'Client-Focused',
+      description: 'Your success is my priority. I work closely with you throughout the project.',
     },
     {
       icon: Code,
-      title: 'Innovation',
-      description: 'We use cutting-edge technologies to create modern solutions.',
+      title: 'Modern Tech',
+      description: 'I use the latest technologies to build fast, responsive applications.',
     },
     {
       icon: CheckIcon,
-      title: 'Reliability',
-      description: 'We deliver projects on time and exceed expectations.',
+      title: 'On-Time Delivery',
+      description: 'I respect deadlines and deliver projects when promised.',
     },
   ];
 
   const achievements = [
-    '100+ Successful Projects',
-    '50+ Happy Clients',
-    '5+ Years of Experience',
-    'Award-Winning Team',
-    '24/7 Support',
-    'Global Reach',
+    '50+ Projects Completed',
+    '100% Client Satisfaction',
+    '2.5 Years Experience',
+    'B.Tech in IT',
+    'Full Stack Expertise',
+    'Available 24/7',
   ];
 
   return (
@@ -73,10 +57,10 @@ const About = () => {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-slide-up">
-            About <span className="text-gradient">DevStudio</span>
+            About <span className="text-gradient">Sattva Doshi</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            We are a passionate team of developers and designers creating exceptional digital experiences that drive business growth.
+            A passionate Full Stack Developer creating exceptional web solutions that drive business growth and deliver outstanding user experiences.
           </p>
         </div>
       </section>
@@ -87,13 +71,13 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in-left">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Our <span className="text-gradient">Story</span>
+                My <span className="text-gradient">Journey</span>
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
-                Founded in 2019, DevStudio began as a small team of passionate developers who believed in the power of exceptional digital experiences. Today, we've grown into a full-service web development agency that partners with businesses of all sizes.
+                Hi, I'm Sattva Doshi, a B.Tech graduate in Information Technology with 2.5 years of hands-on experience in full stack web development. I specialize in creating modern, scalable web applications using cutting-edge technologies.
               </p>
               <p className="text-gray-300 mb-8 text-lg">
-                Our mission is simple: to create digital solutions that not only look amazing but also drive real business results. We combine creativity with technical expertise to deliver projects that exceed expectations.
+                My passion lies in transforming ideas into digital reality. I believe in writing clean, maintainable code and creating user-centric solutions that not only look great but also solve real business problems. Every project is an opportunity to exceed expectations.
               </p>
               <ul className="grid grid-cols-2 gap-4">
                 {achievements.map((achievement, index) => (
@@ -106,8 +90,8 @@ const About = () => {
             </div>
             <div className="animate-scale-up">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&crop=center"
-                alt="Team collaboration"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center"
+                alt="Sattva Doshi - Full Stack Developer"
                 className="rounded-2xl glass-card w-full h-auto object-cover"
               />
             </div>
@@ -120,10 +104,10 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our <span className="text-gradient">Values</span>
+              My <span className="text-gradient">Approach</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              The principles that guide everything we do
+              The principles that guide my work and client relationships
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -144,42 +128,30 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Skills Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Meet Our <span className="text-gradient">Team</span>
+              Technical <span className="text-gradient">Expertise</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              The talented individuals behind our success
+              Technologies I use to build exceptional web solutions
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {skills.map((skill, index) => (
               <div
                 key={index}
                 className="glass-card glass-card-hover p-6 text-center group animate-scale-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative mb-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-neon-cyan/20 group-hover:border-neon-cyan/50 transition-all duration-300"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-neon-cyan mb-4">{member.role}</p>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {member.skills.map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className="px-3 py-1 text-xs rounded-full bg-white/10 text-gray-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                <h3 className="text-lg font-semibold text-white mb-2">{skill}</h3>
+                <div className="w-full bg-gray-700 rounded-full h-2">
+                  <div 
+                    className="bg-gradient-to-r from-neon-cyan to-neon-blue h-2 rounded-full transition-all duration-1000 group-hover:animate-pulse"
+                    style={{ width: `${85 + Math.random() * 15}%` }}
+                  ></div>
                 </div>
               </div>
             ))}
@@ -195,7 +167,7 @@ const About = () => {
               Ready to Work <span className="text-gradient">Together?</span>
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how we can help bring your vision to life
+              Let's discuss how I can help bring your vision to life with cutting-edge web solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="btn-glow inline-flex items-center">
@@ -205,7 +177,7 @@ const About = () => {
                 to="/projects"
                 className="px-6 py-3 rounded-lg border border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-bg transition-all duration-300 inline-flex items-center"
               >
-                View Our Work
+                View My Work
               </Link>
             </div>
           </div>
