@@ -4,17 +4,18 @@ import { CheckIcon, Star, Users, Code, Monitor, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ProgressBar from '../components/ProgressBar';
 
 const About = () => {
   const skills = [
-    'React & Next.js',
-    'Node.js & Express',
-    'TypeScript',
-    'MongoDB & PostgreSQL',
-    'AWS & Cloud Services',
-    'Git & DevOps',
-    'UI/UX Design',
-    'API Development',
+    { name: 'React & Next.js', level: 95 },
+    { name: 'Node.js & Express', level: 90 },
+    { name: 'TypeScript', level: 88 },
+    { name: 'MongoDB & PostgreSQL', level: 85 },
+    { name: 'AWS & Cloud Services', level: 80 },
+    { name: 'Git & DevOps', level: 87 },
+    { name: 'UI/UX Design', level: 75 },
+    { name: 'API Development', level: 92 },
   ];
 
   const values = [
@@ -146,13 +147,13 @@ const About = () => {
                 className="glass-card glass-card-hover p-6 text-center group animate-scale-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h3 className="text-lg font-semibold text-white mb-2">{skill}</h3>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div 
-                    className="bg-gradient-to-r from-neon-cyan to-neon-blue h-2 rounded-full transition-all duration-1000 group-hover:animate-pulse"
-                    style={{ width: `${85 + Math.random() * 15}%` }}
-                  ></div>
-                </div>
+                <h3 className="text-lg font-semibold text-white mb-4">{skill.name}</h3>
+                <ProgressBar 
+                  targetPercentage={skill.level}
+                  duration={2000}
+                  delay={index * 200}
+                  className="mt-2"
+                />
               </div>
             ))}
           </div>
