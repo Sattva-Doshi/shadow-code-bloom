@@ -150,8 +150,8 @@ const About = () => {
                 <h3 className="text-lg font-semibold text-white mb-4">{skill.name}</h3>
                 <ProgressBar 
                   targetPercentage={skill.level}
-                  duration={2000}
-                  delay={index * 200}
+                  duration={2500}
+                  delay={0}
                   className="mt-2"
                 />
               </div>

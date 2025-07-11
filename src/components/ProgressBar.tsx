@@ -65,15 +65,12 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
     <div ref={elementRef} className={`w-full ${className}`}>
       <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
         <div 
-          className="bg-gradient-to-r from-neon-cyan to-neon-blue h-2 rounded-full transition-all duration-300 shadow-sm shadow-neon-cyan/50"
+          className="bg-gradient-to-r from-neon-cyan to-neon-blue h-2 rounded-full shadow-sm shadow-neon-cyan/50"
           style={{ 
             width: `${currentPercentage}%`,
-            transition: 'width 0.1s ease-out'
+            transition: 'width 0.05s ease-out'
           }}
         />
-      </div>
-      <div className="text-right mt-1">
-        <span className="text-xs text-gray-400">{currentPercentage}%</span>
       </div>
     </div>
   );
